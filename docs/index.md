@@ -11,18 +11,18 @@ The goal of this model is to create a digital twin of vehicles moving through a 
 - Lane closures
 - Speed limit changes
 
-I believe that the flow of traffic is a very complex system that if it can be modeled, then policy decisions can be made to improve traffic flow or assess necessary changes with more information.
+I believe that the flow of traffic is a very complex system that if it can be modeled, then policy decisions can be made to improve traffic flow based on data driven insights.
 
 ## Model Abstract
 Imagine you had the ability to hover high in the sky and observe a section of road to better understand the traffic conditions of the road.  What if you could see some repeated patterns that could be rectified, reducing the amount of traffic and the reduced speeds on the road?
 
-This model is going to focus on a single vehicle on a road of many different road conditions.  The vehicle will begin at the starting point and the model will end when the vehicle reaches the end.  Each timestep will be one movement of the focus vehicle along with all other vehicles on the road.  The focus vehicle will have a desired speed, which will determine how far it makes it each time step, but this will be affected by the differing road conditions.
+This model is going to focus on a single vehicle (the primary vehicle) on a road of many different road conditions.  The vehicle will begin at the starting point and the model will end when the vehicle reaches the end.  Each timestep will be one movement of the primary vehicle along with all other vehicles on the road.  The primary vehicle will have a desired speed, which will determine how far it makes it each time step, but this will be affected by the differing road conditions.
 
 ## Background
 There are many times when driving that I get stuck in traffic and when you finally are able to get back to your desired speed, it isn’t always clear what caused the slowdown.  Sometimes it is obvious, there is an accident or a lane is closed for construction.  Or it could be a heavy traffic area due to ‘rush hour’.  But other times it is just slow, then it isn’t slow.  One would need to measure what is happening to rectify these recurring problems.
 
 ## Simple Use Case
-The first version of this model will measure the focus vehicle with no other vehicles on the road in a single lane of traffic.  The length of the road will start short.  It can be expanded once the basic model is working.  Once the model can be built to represent a single vehicle, then a second vehicle will be added in front of the focus vehicle that is traveling at a slower speed, to make sure that I can measure the impact.
+The first version of this model will measure the primary vehicle with no other vehicles on the road in a single lane of traffic.  The length of the road will start short.  It can be expanded once the basic model is working.  Once the model can be built to represent a single vehicle, then a second vehicle will be added in front of the primary vehicle that is traveling at a slower speed, to make sure that I can measure the impact.
 
 ## Model Rules
 - No two vehicles can be in the same space, but that may be violated in the future to create the occurrence of an accident.
